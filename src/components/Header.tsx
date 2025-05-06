@@ -27,12 +27,9 @@ const Header = () => {
     >
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#" className="flex items-center">
-            <img 
-              src="/lovable-uploads/42dec312-fe69-4b0a-8127-de9e851ca00b.png" 
-              alt="MediMaily Logo" 
-              className="h-8 md:h-10"
-            />
+          <a href="#" className="text-2xl font-bold text-medimaily-900 flex items-center">
+            <span className="text-medimaily-600">Medi</span>Maily
+            <span className="ml-1 inline-block bg-medimaily-500 h-2 w-2 rounded-full animate-pulse"></span>
           </a>
         </div>
         
