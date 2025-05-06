@@ -11,26 +11,26 @@ const Footer = () => {
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
+            <h2 className="text-3xl font-bold mb-6">Kontaktieren Sie uns</h2>
             <p className="text-gray-300 mb-8 max-w-md">
-              Have questions about MediMaily or want to see how we can help your dental practice? Send us a message and we'll get back to you shortly.
+              Haben Sie Fragen zu MediMaily oder möchten Sie wissen, wie wir Ihrer Zahnarztpraxis helfen können? Senden Sie uns eine Nachricht, und wir melden uns in Kürze bei Ihnen.
             </p>
             
             <div className="space-y-6">
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-medimaily-300 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-medium text-white mb-1">Address</h3>
-                  <p className="text-gray-300">123 Dental Suite, San Francisco, CA 94103</p>
+                  <h3 className="font-medium text-white mb-1">Adresse</h3>
+                  <p className="text-gray-300">Zahnstraße 123, 10115 Berlin</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 text-medimaily-300 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-medium text-white mb-1">Email</h3>
-                  <a href="mailto:hello@medimaily.com" className="text-gray-300 hover:text-white transition-colors">
-                    hello@medimaily.com
+                  <h3 className="font-medium text-white mb-1">E-Mail</h3>
+                  <a href="mailto:hallo@medimaily.de" className="text-gray-300 hover:text-white transition-colors">
+                    hallo@medimaily.de
                   </a>
                 </div>
               </div>
@@ -38,9 +38,9 @@ const Footer = () => {
               <div className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 text-medimaily-300 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-medium text-white mb-1">Phone</h3>
-                  <a href="tel:+14155559876" className="text-gray-300 hover:text-white transition-colors">
-                    (415) 555-9876
+                  <h3 className="font-medium text-white mb-1">Telefon</h3>
+                  <a href="tel:+4930123456789" className="text-gray-300 hover:text-white transition-colors">
+                    (030) 12345-6789
                   </a>
                 </div>
               </div>
@@ -52,56 +52,56 @@ const Footer = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-300">
-                    Your Name
+                    Ihr Name
                   </label>
                   <Input 
                     id="name" 
                     className="bg-medimaily-800 border-medimaily-700 text-white placeholder-gray-400 focus:border-medimaily-500" 
-                    placeholder="John Smith"
+                    placeholder="Max Mustermann"
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-300">
-                    Email Address
+                    E-Mail-Adresse
                   </label>
                   <Input 
                     id="email" 
                     type="email" 
                     className="bg-medimaily-800 border-medimaily-700 text-white placeholder-gray-400 focus:border-medimaily-500" 
-                    placeholder="john@example.com"
+                    placeholder="max@beispiel.de"
                   />
                 </div>
               </div>
               
               <div>
                 <label htmlFor="practice" className="block mb-2 text-sm font-medium text-gray-300">
-                  Practice Name
+                  Praxisname
                 </label>
                 <Input 
                   id="practice" 
                   className="bg-medimaily-800 border-medimaily-700 text-white placeholder-gray-400 focus:border-medimaily-500" 
-                  placeholder="Your Dental Practice"
+                  placeholder="Ihre Zahnarztpraxis"
                 />
               </div>
               
               <div>
                 <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-300">
-                  Message
+                  Nachricht
                 </label>
                 <Textarea 
                   id="message" 
                   className="bg-medimaily-800 border-medimaily-700 text-white placeholder-gray-400 focus:border-medimaily-500" 
-                  placeholder="Let us know how we can help..."
+                  placeholder="Lassen Sie uns wissen, wie wir Ihnen helfen können..."
                   rows={4}
                 />
               </div>
               
               <Button className="w-full bg-medimaily-500 hover:bg-medimaily-600 text-white">
-                Send Message
+                Nachricht Senden
               </Button>
               
               <p className="text-xs text-gray-400 mt-4">
-                By submitting this form, you agree to our <a href="#" className="text-medimaily-300 hover:text-white">Privacy Policy</a>.
+                Mit dem Absenden dieses Formulars stimmen Sie unserer <a href="#" className="text-medimaily-300 hover:text-white">Datenschutzerklärung</a> zu.
               </p>
             </form>
           </div>
@@ -117,16 +117,16 @@ const Footer = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-5">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Home</a>
-            <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
-            <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Terms</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Startseite</a>
+            <a href="#features" className="text-gray-300 hover:text-white transition-colors">Funktionen</a>
+            <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Preise</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Datenschutz</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Impressum</a>
           </div>
         </div>
         
         <div className="text-center text-gray-400 text-sm mt-8">
-          © {new Date().getFullYear()} MediMaily. All rights reserved.
+          © {new Date().getFullYear()} MediMaily. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

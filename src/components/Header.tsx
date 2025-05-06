@@ -33,15 +33,15 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Home</a>
-          <a href="#features" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Features</a>
-          <a href="#pricing" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Pricing</a>
-          <a href="#contact" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Contact</a>
+          <a href="#" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Startseite</a>
+          <a href="#features" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Funktionen</a>
+          <a href="#pricing" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Preise</a>
+          <a href="#contact" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Kontakt</a>
         </nav>
         
         <div className="hidden md:block">
           <Button className="btn-primary">
-            Get Started
+            Jetzt Starten
           </Button>
         </div>
         
@@ -63,12 +63,12 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 absolute w-full py-3">
           <div className="container-custom flex flex-col space-y-3">
-            <a href="#" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Home</a>
-            <a href="#features" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Features</a>
-            <a href="#pricing" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Pricing</a>
-            <a href="#contact" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Contact</a>
+            <a href="#" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Startseite</a>
+            <a href="#features" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Funktionen</a>
+            <a href="#pricing" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Preise</a>
+            <a href="#contact" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Kontakt</a>
             <Button className="btn-primary w-full mt-3">
-              Get Started
+              Jetzt Starten
             </Button>
           </div>
         </div>

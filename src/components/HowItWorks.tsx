@@ -6,20 +6,20 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "01",
-      title: "We Analyze Your Practice",
-      description: "We study your dental practice, patient demographics, and goals to create a custom strategy.",
+      title: "Wir analysieren Ihre Praxis",
+      description: "Wir untersuchen Ihre Zahnarztpraxis, Patientendemografie und Ziele, um eine maßgeschneiderte Strategie zu erstellen.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "02",
-      title: "We Create Your Campaigns",
-      description: "Our team develops targeted email sequences designed to engage potential patients.",
+      title: "Wir erstellen Ihre Kampagnen",
+      description: "Unser Team entwickelt gezielte E-Mail-Sequenzen, die potenzielle Patienten ansprechen.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
     },
     {
       number: "03",
-      title: "We Deliver Results",
-      description: "Track real-time performance with our dashboard and watch your practice grow.",
+      title: "Wir liefern Ergebnisse",
+      description: "Verfolgen Sie die Leistung in Echtzeit mit unserem Dashboard und beobachten Sie, wie Ihre Praxis wächst.",
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80"
     }
   ];
@@ -28,9 +28,9 @@ const HowItWorks = () => {
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="section-title">How It Works</h2>
+          <h2 className="section-title">Wie es funktioniert</h2>
           <p className="section-subtitle">
-            Our simple three-step process makes email marketing effortless for your dental practice.
+            Unser einfacher Drei-Schritte-Prozess macht E-Mail-Marketing mühelos für Ihre Zahnarztpraxis.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ const HowItWorks = () => {
 
         <div className="mt-16 text-center">
           <Button className="btn-primary">
-            See It In Action
+            In Aktion Sehen
           </Button>
         </div>
       </div>
