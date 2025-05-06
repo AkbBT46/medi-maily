@@ -13,7 +13,7 @@ const Hero = () => {
         
         <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-medimaily-900 max-w-4xl mx-auto transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           Automatisierte E-Mails. <span className="text-medimaily-600">
- Mehr Patienten.</span>
+Mehr Patienten.</span>
         </h1>
         
         <p className={`text-lg md:text-xl text-medimaily-700 mb-6 max-w-2xl mx-auto transition-all duration-700 delay-100 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
