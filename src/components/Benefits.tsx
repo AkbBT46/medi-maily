@@ -1,8 +1,10 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Clock, CheckCircle, Inbox } from 'lucide-react';
 
 const Benefits = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
   const benefits = [
     {
       icon: <Clock className="h-10 w-10 text-medimaily-600" />,
@@ -21,10 +23,30 @@ const Benefits = () => {
     }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      animatedElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
-    <section id="features" className="section-padding bg-white">
+    <section id="features" className="section-padding bg-white" ref={sectionRef}>
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <h2 className="section-title">Warum Zahnarztpraxen uns wählen</h2>
           <p className="section-subtitle">
             Wir helfen Ihnen, stärkere Patientenbeziehungen durch gezielte, personalisierte E-Mail-Kampagnen aufzubauen.
@@ -35,10 +57,13 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 hover:border-medimaily-200"
+              className="animate-on-scroll bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-medimaily-200 transform hover:-translate-y-1 card-hover"
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="mb-6">
-                {benefit.icon}
+                <div className="bg-medimaily-50 w-16 h-16 rounded-full flex items-center justify-center">
+                  {benefit.icon}
+                </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-medimaily-900">{benefit.title}</h3>
               <p className="text-medimaily-700">{benefit.description}</p>
@@ -46,7 +71,7 @@ const Benefits = () => {
           ))}
         </div>
         
-        <div className="mt-16 p-8 rounded-lg bg-medimaily-50 border border-medimaily-100">
+        <div className="mt-16 p-8 rounded-lg bg-gradient-to-r from-medimaily-50 to-medimaily-100 border border-medimaily-100 shadow-lg animate-on-scroll">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0 md:pr-8">
               <h3 className="text-2xl font-bold mb-2 text-medimaily-900">Bereit, Ihre Praxis zu vergrößern?</h3>

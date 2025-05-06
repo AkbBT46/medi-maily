@@ -27,16 +27,29 @@ const Header = () => {
     >
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center">
-          <a href="#" className="text-2xl font-bold text-medimaily-900">
+          <a href="#" className="text-2xl font-bold text-medimaily-900 flex items-center">
             <span className="text-medimaily-600">Medi</span>Maily
+            <span className="ml-1 inline-block bg-medimaily-500 h-2 w-2 rounded-full animate-pulse"></span>
           </a>
         </div>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Startseite</a>
-          <a href="#features" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Funktionen</a>
-          <a href="#pricing" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Preise</a>
-          <a href="#contact" className="text-medimaily-900 hover:text-medimaily-600 transition-colors">Kontakt</a>
+          <a href="#" className="text-medimaily-900 hover:text-medimaily-600 transition-colors relative group">
+            Startseite
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-medimaily-500 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#features" className="text-medimaily-900 hover:text-medimaily-600 transition-colors relative group">
+            Funktionen
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-medimaily-500 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#pricing" className="text-medimaily-900 hover:text-medimaily-600 transition-colors relative group">
+            Preise
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-medimaily-500 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#contact" className="text-medimaily-900 hover:text-medimaily-600 transition-colors relative group">
+            Kontakt
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-medimaily-500 group-hover:w-full transition-all duration-300"></span>
+          </a>
         </nav>
         
         <div className="hidden md:block">
@@ -48,6 +61,7 @@ const Header = () => {
         <button 
           className="md:hidden text-medimaily-900" 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             {mobileMenuOpen ? (
@@ -61,7 +75,7 @@ const Header = () => {
       
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 absolute w-full py-3">
+        <div className="md:hidden bg-white border-t border-gray-200 absolute w-full py-3 animate-slide-up">
           <div className="container-custom flex flex-col space-y-3">
             <a href="#" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Startseite</a>
             <a href="#features" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Funktionen</a>
