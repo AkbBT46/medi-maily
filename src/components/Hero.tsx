@@ -20,9 +20,7 @@ Mehr Patienten.</span>
           Helfen Sie Ihrer Zahnarztpraxis zu wachsen mit personalisierten E-Mail-Kampagnen, die mehr Patienten gewinnen und halten.
         </p>
         
-        <p className={`text-lg md:text-xl font-medium text-medimaily-600 mb-10 transition-all duration-700 delay-200 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          Mehr Zeit, mehr Anfragen, weniger Aufwand.
-        </p>
+        <p className={`text-lg md:text-xl font-medium text-medimaily-600 mb-10 transition-all duration-700 delay-200 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>Mehr Zeit, mehr Anfragen, weniger Aufwand...</p>
         
         <div className={`flex flex-col sm:flex-row justify-center gap-4 transition-all duration-700 delay-300 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <Button className="btn-primary text-base py-6 px-8">
