@@ -63,19 +63,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// MediMaily custom colors
+				// MediMaily custom colors - changed to orange palette
 				medimaily: {
-					50: '#f0f7ff',
-					100: '#e0effe',
-					200: '#bae1fd',
-					300: '#7dcafa',
-					400: '#38adfc',
-					500: '#1e95e9',
-					600: '#0d76cd',
-					700: '#0d5ca6',
-					800: '#114e89',
-					900: '#154172',
-					950: '#0f2847',
+					50: '#fff7ed',
+					100: '#ffedd5',
+					200: '#fed7aa',
+					300: '#fdba74',
+					400: '#fb923c',
+					500: '#f97316',
+					600: '#ea580c',
+					700: '#c2410c',
+					800: '#9a3412',
+					900: '#7c2d12',
+					950: '#431407',
 				},
 			},
 			borderRadius: {
