@@ -2,9 +2,51 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import MacOSDock from '@/components/ui/mac-os-dock';
+
+// Sample app data for the dock
+const sampleApps = [
+  { 
+    id: 'finder', 
+    name: 'Finder', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/finder-2021-09-10.png?rf=1024' 
+  },
+  { 
+    id: 'calculator', 
+    name: 'Calculator', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/calculator-2021-04-29.png?rf=1024' 
+  },
+  { 
+    id: 'terminal', 
+    name: 'Terminal', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/terminal-2021-06-03.png?rf=1024' 
+  },
+  { 
+    id: 'mail', 
+    name: 'Mail', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/mail-2021-05-25.png?rf=1024' 
+  },
+  { 
+    id: 'safari', 
+    name: 'Safari', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/safari-2021-06-02.png?rf=1024' 
+  },
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openApps, setOpenApps] = useState<string[]>(['finder', 'safari']);
+
+  const handleAppClick = (appId: string) => {
+    console.log('App clicked:', appId);
+    
+    // Toggle app in openApps array
+    setOpenApps(prev => 
+      prev.includes(appId) 
+        ? prev.filter(id => id !== appId)
+        : [...prev, appId]
+    );
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -31,6 +73,15 @@ const Header = () => {
               Preise
             </a>
           </nav>
+
+          {/* MacOS Dock */}
+          <div className="hidden lg:flex items-center">
+            <MacOSDock
+              apps={sampleApps}
+              onAppClick={handleAppClick}
+              openApps={openApps}
+            />
+          </div>
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
@@ -87,6 +138,14 @@ const Header = () => {
               >
                 Preise
               </a>
+              {/* Mobile Dock */}
+              <div className="pt-4 flex justify-center">
+                <MacOSDock
+                  apps={sampleApps}
+                  onAppClick={handleAppClick}
+                  openApps={openApps}
+                />
+              </div>
               <div className="pt-4 space-y-2">
                 <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
                   Anmelden
