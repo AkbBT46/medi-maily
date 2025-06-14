@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import MacOSDock from '@/components/ui/mac-os-dock';
-import { AppleHelloEnglishEffect } from '@/components/ui/apple-hello-effect';
+import { MediMailyAnimation } from '@/components/ui/medimaily-animation';
 
 // Sample app data with actual macOS-style icons
 const sampleApps = [
@@ -126,7 +126,7 @@ Mehr Patienten.</span>
 
         {/* MediMaily Animation */}
         <div className={`mb-6 flex justify-center transition-all duration-700 delay-75 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <AppleHelloEnglishEffect 
+          <MediMailyAnimation 
             key={animationKey}
             speed={1.1} 
             className="h-16 md:h-20 text-medimaily-400"
