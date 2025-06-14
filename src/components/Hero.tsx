@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import MacOSDock from '@/components/ui/mac-os-dock';
 import { MediMailyAnimation } from '@/components/ui/medimaily-animation';
+import { TextShimmer } from '@/components/ui/text-shimmer';
 
 // Sample app data with actual macOS-style icons
 const sampleApps = [
@@ -119,9 +120,17 @@ const Hero = () => {
           />
         </div>
 
-        <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-blue-500 max-w-4xl mx-auto transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          Automatisierte E-Mails. <span className="text-medimaily-400">
-Mehr Patienten.</span>
+        <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl mx-auto transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <TextShimmer
+            as="span"
+            duration={3}
+            className="[--base-color:theme(colors.blue.500)] [--base-gradient-color:theme(colors.blue.300)]"
+          >
+            Automatisierte E-Mails.
+          </TextShimmer>{' '}
+          <span className="text-medimaily-400">
+            Mehr Patienten.
+          </span>
         </h1>
 
         {/* MediMaily Animation */}
