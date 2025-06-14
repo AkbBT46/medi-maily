@@ -59,8 +59,9 @@ const Hero = () => {
     console.log('App clicked:', appId);
     
     // Open specific applications based on the clicked icon
-    if (appId === 'safari') {
-      window.open('https://google.de', '_blank');
+    if (appId === 'finder') {
+      // Open file manager/explorer
+      window.open('file://', '_blank');
     } else if (appId === 'calculator') {
       // Open Calculator application
       window.open('calculator://', '_blank');
@@ -70,6 +71,21 @@ const Hero = () => {
     } else if (appId === 'mail') {
       // Open Outlook application
       window.open('ms-outlook://', '_blank');
+    } else if (appId === 'notes') {
+      // Open Notes application
+      window.open('ms-onenote://', '_blank');
+    } else if (appId === 'safari') {
+      // Open default browser
+      window.open('https://www.google.com', '_blank');
+    } else if (appId === 'photos') {
+      // Open Photos application
+      window.open('ms-photos://', '_blank');
+    } else if (appId === 'music') {
+      // Open Music/Spotify application
+      window.open('spotify://', '_blank');
+    } else if (appId === 'calendar') {
+      // Open Calendar application
+      window.open('ms-outlook://calendar', '_blank');
     }
     
     // Toggle app in openApps array
