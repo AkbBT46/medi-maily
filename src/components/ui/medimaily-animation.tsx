@@ -46,8 +46,8 @@ function MediMailyAnimation({
 
       {/* M */}
       <motion.path
-        d="M8.69214 166.553C36.2393 151.239 61.3409 131.548 89.8191 98.0295C109.203 75.1488 119.625 49.0228 120.122 31.0026C120.37 17.6036 113.836 7.43883 101.759 7.43883C88.3598 7.43883 79.9231 17.6036 74.7122 40.9363C69.005 66.5793 64.7866 96.0036 54.1166 190.356"
-        style={{ strokeLinecap: "round" }}
+        d="M20 170 L20 50 L50 50 L70 120 L90 50 L120 50 L120 170"
+        style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
         transition={{
