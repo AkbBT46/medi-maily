@@ -31,15 +31,21 @@ function MediMailyAnimation({
 
   return (
     <motion.svg
-      className={cn("h-20", className)}
+      className={cn("h-20 font-bold", className)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 800 200"
       fill="none"
       stroke="currentColor"
-      strokeWidth="8"
+      strokeWidth="6"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
+      style={{ 
+        fontFamily: 'Inter, sans-serif',
+        fontWeight: 'bold',
+        strokeLinecap: 'round',
+        strokeLinejoin: 'round'
+      }}
       {...props}
     >
       <title>MediMaily</title>
