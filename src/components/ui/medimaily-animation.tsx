@@ -59,7 +59,7 @@ function MediMailyAnimation({
 
       {/* e */}
       <motion.path
-        d="M80 170 L80 50 L140 50 M80 110 L130 110 M80 170 L140 170"
+        d="M150 170 L150 50 L210 50 M150 110 L200 110 M150 170 L210 170"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
@@ -73,7 +73,7 @@ function MediMailyAnimation({
 
       {/* d */}
       <motion.path
-        d="M170 170 L170 30 M170 50 Q220 50 220 110 Q220 170 170 170"
+        d="M240 170 L240 30 M240 50 Q290 50 290 110 Q290 170 240 170"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
@@ -87,7 +87,7 @@ function MediMailyAnimation({
 
       {/* i */}
       <motion.path
-        d="M250 50 L250 170 M250 35 L250 35"
+        d="M320 50 L320 170 M320 35 L320 35"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
@@ -101,7 +101,7 @@ function MediMailyAnimation({
 
       {/* M */}
       <motion.path
-        d="M300 170 L300 50 L330 50 L360 120 L390 50 L420 50 L420 170"
+        d="M370 170 L370 50 L400 50 L430 120 L460 50 L490 50 L490 170"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
@@ -115,7 +115,7 @@ function MediMailyAnimation({
 
       {/* a */}
       <motion.path
-        d="M450 170 L470 50 L490 170 M460 130 L480 130"
+        d="M520 170 L540 50 L560 170 M530 130 L550 130"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
@@ -129,7 +129,7 @@ function MediMailyAnimation({
 
       {/* i */}
       <motion.path
-        d="M520 50 L520 170 M520 35 L520 35"
+        d="M590 50 L590 170 M590 35 L590 35"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
@@ -143,7 +143,7 @@ function MediMailyAnimation({
 
       {/* l */}
       <motion.path
-        d="M550 30 L550 170"
+        d="M620 30 L620 170"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
@@ -157,7 +157,7 @@ function MediMailyAnimation({
 
       {/* y */}
       <motion.path
-        d="M580 50 L600 110 L620 50 M600 110 L600 190"
+        d="M650 50 L670 110 L690 50 M670 110 L670 190"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
         initial={initialProps}
         animate={animateProps}
