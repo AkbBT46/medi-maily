@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 const Hero = () => {
@@ -7,7 +8,7 @@ const Hero = () => {
   }, []);
   return <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative z-10 min-h-screen flex items-center">
       <div className="container-custom text-center relative">
-        <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white max-w-4xl mx-auto transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-blue-500 max-w-4xl mx-auto transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           Automatisierte E-Mails. <span className="text-medimaily-400">
 Mehr Patienten.</span>
         </h1>
