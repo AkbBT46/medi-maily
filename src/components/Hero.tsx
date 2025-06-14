@@ -1,9 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import MacOSDock from '@/components/ui/mac-os-dock';
 
-// Sample app data for the dock
+// Sample app data with actual macOS-style icons
 const sampleApps = [
   { 
     id: 'finder', 
@@ -26,9 +25,29 @@ const sampleApps = [
     icon: 'https://cdn.jim-nielsen.com/macos/1024/mail-2021-05-25.png?rf=1024' 
   },
   { 
+    id: 'notes', 
+    name: 'Notes', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/notes-2021-05-25.png?rf=1024' 
+  },
+  { 
     id: 'safari', 
     name: 'Safari', 
     icon: 'https://cdn.jim-nielsen.com/macos/1024/safari-2021-06-02.png?rf=1024' 
+  },
+  { 
+    id: 'photos', 
+    name: 'Photos', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/photos-2021-05-28.png?rf=1024' 
+  },
+  { 
+    id: 'music', 
+    name: 'Music', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/music-2021-05-25.png?rf=1024' 
+  },
+  { 
+    id: 'calendar', 
+    name: 'Calendar', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/calendar-2021-04-29.png?rf=1024' 
   },
 ];
 
