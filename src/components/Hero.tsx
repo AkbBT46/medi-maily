@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import MacOSDock from '@/components/ui/mac-os-dock';
+import { AppleHelloEnglishEffect } from '@/components/ui/apple-hello-effect';
 
 // Sample app data with actual macOS-style icons
 const sampleApps = [
@@ -54,6 +55,7 @@ const sampleApps = [
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [openApps, setOpenApps] = useState<string[]>(['finder', 'safari']);
+  const [animationKey, setAnimationKey] = useState(0);
 
   const handleAppClick = (appId: string) => {
     console.log('App clicked:', appId);
@@ -96,6 +98,11 @@ const Hero = () => {
     );
   };
 
+  const handleAnimationComplete = () => {
+    // Restart the animation by changing the key
+    setAnimationKey(prev => prev + 1);
+  };
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -116,6 +123,16 @@ const Hero = () => {
           Automatisierte E-Mails. <span className="text-medimaily-400">
 Mehr Patienten.</span>
         </h1>
+
+        {/* MediMaily Animation */}
+        <div className={`mb-6 flex justify-center transition-all duration-700 delay-75 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <AppleHelloEnglishEffect 
+            key={animationKey}
+            speed={1.1} 
+            className="h-16 md:h-20 text-medimaily-400"
+            onAnimationComplete={handleAnimationComplete}
+          />
+        </div>
         
         <p className={`text-lg md:text-xl text-white/80 mb-6 max-w-2xl mx-auto transition-all duration-700 delay-100 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           Helfen Sie Ihrer Zahnarztpraxis zu wachsen mit personalisierten E-Mail-Kampagnen, die mehr Patienten gewinnen und halten.
