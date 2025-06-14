@@ -38,8 +38,10 @@ const Hero = () => {
   const handleAppClick = (appId: string) => {
     console.log('App clicked:', appId);
     
-    // Open google.de in a new tab when any icon is clicked
-    window.open('https://google.de', '_blank');
+    // Only open google.de when Safari (rightmost icon) is clicked
+    if (appId === 'safari') {
+      window.open('https://google.de', '_blank');
+    }
     
     // Toggle app in openApps array
     setOpenApps(prev => 
