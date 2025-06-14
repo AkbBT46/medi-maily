@@ -1,114 +1,105 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ChromeGrid } from '@/components/ui/chrome-grid';
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      setScrolled(offset > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <>
-      {/* 3D Background Grid */}
-      <div className="fixed top-0 left-0 right-0 h-screen z-0 pointer-events-none">
-        <ChromeGrid />
-      </div>
-      
-      {/* Header Content */}
-      <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-white/90 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'
-        }`}
-      >
-        <div className="container-custom flex justify-between items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <a href="#" className={`text-2xl font-bold flex items-center transition-colors ${
-              scrolled ? 'text-medimaily-900' : 'text-white'
-            }`}>
-              <span className={scrolled ? 'text-medimaily-600' : 'text-medimaily-400'}>Medi</span>Maily
-              <span className="ml-1 inline-block bg-medimaily-500 h-2 w-2 rounded-full animate-pulse"></span>
-            </a>
+            <div className="text-2xl font-bold text-blue-600">
+              MediMaily
+            </div>
           </div>
-          
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className={`hover:text-medimaily-600 transition-colors relative group ${
-              scrolled ? 'text-medimaily-900' : 'text-white'
-            }`}>
-              Startseite
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-medimaily-500 group-hover:w-full transition-all duration-300"></span>
+            <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Features
             </a>
-            <a href="#features" className={`hover:text-medimaily-600 transition-colors relative group ${
-              scrolled ? 'text-medimaily-900' : 'text-white'
-            }`}>
-              Funktionen
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-medimaily-500 group-hover:w-full transition-all duration-300"></span>
+            <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Wie es funktioniert
             </a>
-            <a href="#pricing" className={`hover:text-medimaily-600 transition-colors relative group ${
-              scrolled ? 'text-medimaily-900' : 'text-white'
-            }`}>
+            <a href="#testimonials" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Testimonials
+            </a>
+            <a href="#pricing" className="text-gray-700 hover:text-blue-600 transition-colors">
               Preise
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-medimaily-500 group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#contact" className={`hover:text-medimaily-600 transition-colors relative group ${
-              scrolled ? 'text-medimaily-900' : 'text-white'
-            }`}>
-              Kontakt
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-medimaily-500 group-hover:w-full transition-all duration-300"></span>
             </a>
           </nav>
-          
-          <div className="hidden md:block">
-            <Button className="btn-primary">
-              Jetzt Starten
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+              Anmelden
+            </Button>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              Kostenlos starten
             </Button>
           </div>
-          
-          <button 
-            className={`md:hidden transition-colors ${
-              scrolled ? 'text-medimaily-900' : 'text-white'
-            }`}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
-              )}
-            </svg>
-          </button>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700"
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
-        
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white/90 backdrop-blur-sm border-t border-gray-200 absolute w-full py-3 animate-slide-up">
-            <div className="container-custom flex flex-col space-y-3">
-              <a href="#" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Startseite</a>
-              <a href="#features" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Funktionen</a>
-              <a href="#pricing" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Preise</a>
-              <a href="#contact" className="text-medimaily-900 hover:text-medimaily-600 transition-colors py-2">Kontakt</a>
-              <Button className="btn-primary w-full mt-3">
-                Jetzt Starten
-              </Button>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              <a
+                href="#features"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Features
+              </a>
+              <a
+                href="#how-it-works"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Wie es funktioniert
+              </a>
+              <a
+                href="#testimonials"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Testimonials
+              </a>
+              <a
+                href="#pricing"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Preise
+              </a>
+              <div className="pt-4 space-y-2">
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
+                  Anmelden
+                </Button>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  Kostenlos starten
+                </Button>
+              </div>
             </div>
           </div>
         )}
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 
