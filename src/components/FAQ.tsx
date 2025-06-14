@@ -32,7 +32,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-slate-900/50">
       <div className="container-custom">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="section-title">Häufig gestellte Fragen</h2>
@@ -44,11 +44,11 @@ const FAQ = () => {
         <div className="max-w-3xl mx-auto animate-on-scroll">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-medimaily-100">
-                <AccordionTrigger className="text-lg text-medimaily-900 hover:text-medimaily-600 py-5">
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-slate-700">
+                <AccordionTrigger className="text-lg text-slate-100 hover:text-blue-400 py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-medimaily-700 pb-5">
+                <AccordionContent className="text-slate-300 pb-5">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -57,7 +57,7 @@ const FAQ = () => {
         </div>
 
         <div className="text-center mt-10 animate-on-scroll">
-          <p className="mb-5 text-medimaily-700">Haben Sie weitere Fragen?</p>
+          <p className="mb-5 text-slate-300">Haben Sie weitere Fragen?</p>
           <button className="btn-outline">
             Kontaktieren Sie uns
           </button>
