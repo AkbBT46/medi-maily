@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import MacOSDock from '@/components/ui/mac-os-dock';
@@ -128,9 +129,13 @@ const Hero = () => {
           >
             Automatisierte E-Mails.
           </TextShimmer>{' '}
-          <span className="text-medimaily-400">
+          <TextShimmer
+            as="span"
+            duration={3}
+            className="[--base-color:theme(colors.orange.500)] [--base-gradient-color:theme(colors.orange.300)]"
+          >
             Mehr Patienten.
-          </span>
+          </TextShimmer>
         </h1>
 
         {/* MediMaily Animation */}
