@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import MacOSDock from '@/components/ui/mac-os-dock';
@@ -38,9 +39,18 @@ const Hero = () => {
   const handleAppClick = (appId: string) => {
     console.log('App clicked:', appId);
     
-    // Only open google.de when Safari (rightmost icon) is clicked
+    // Open specific applications based on the clicked icon
     if (appId === 'safari') {
       window.open('https://google.de', '_blank');
+    } else if (appId === 'calculator') {
+      // Open Calculator application
+      window.open('calculator://', '_blank');
+    } else if (appId === 'terminal') {
+      // Open Terminal application
+      window.open('terminal://', '_blank');
+    } else if (appId === 'mail') {
+      // Open Outlook application
+      window.open('ms-outlook://', '_blank');
     }
     
     // Toggle app in openApps array
