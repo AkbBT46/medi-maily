@@ -53,7 +53,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="section-padding bg-gray-50">
+    <section id="pricing" className="section-padding bg-blue-50">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="section-title">Einfache, transparente Preise</h2>
@@ -62,7 +62,7 @@ const Pricing = () => {
           </p>
           
           <div className="flex items-center justify-center mt-8 mb-12">
-            <span className={`mr-3 ${isAnnual ? 'text-medimaily-600 font-medium' : 'text-gray-500'}`}>
+            <span className={`mr-3 ${isAnnual ? 'text-blue-600 font-medium' : 'text-blue-500'}`}>
               Jährliche Abrechnung
             </span>
             <div className="relative inline-block w-12 align-middle select-none">
@@ -76,8 +76,8 @@ const Pricing = () => {
               />
               <label
                 htmlFor="billing"
-                className={`block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer ${
-                  !isAnnual ? 'bg-medimaily-600' : ''
+                className={`block overflow-hidden h-6 rounded-full bg-blue-200 cursor-pointer ${
+                  !isAnnual ? 'bg-blue-600' : ''
                 }`}
               >
                 <span
@@ -87,7 +87,7 @@ const Pricing = () => {
                 />
               </label>
             </div>
-            <span className={`ml-3 ${!isAnnual ? 'text-medimaily-600 font-medium' : 'text-gray-500'}`}>
+            <span className={`ml-3 ${!isAnnual ? 'text-blue-600 font-medium' : 'text-blue-500'}`}>
               Monatliche Abrechnung
             </span>
           </div>
@@ -98,28 +98,28 @@ const Pricing = () => {
             <div 
               key={index}
               className={`bg-white rounded-lg shadow-lg border ${
-                plan.isPopular ? 'border-medimaily-500' : 'border-gray-100'
+                plan.isPopular ? 'border-blue-500' : 'border-blue-200'
               } relative overflow-hidden`}
             >
               {plan.isPopular && (
                 <div className="absolute top-0 right-0">
-                  <div className="bg-medimaily-500 text-white py-1 px-3 transform rotate-45 translate-x-8 translate-y-2">
+                  <div className="bg-blue-500 text-white py-1 px-3 transform rotate-45 translate-x-8 translate-y-2">
                     Beliebt
                   </div>
                 </div>
               )}
               
               <div className="p-8">
-                <h3 className="text-xl font-bold mb-2 text-medimaily-900">{plan.name}</h3>
-                <p className="text-medimaily-700 mb-6">{plan.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-blue-900">{plan.name}</h3>
+                <p className="text-blue-700 mb-6">{plan.description}</p>
                 
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-medimaily-900">
+                  <span className="text-4xl font-bold text-blue-900">
                     {isAnnual ? plan.annualPrice : plan.monthlyPrice}€
                   </span>
-                  <span className="text-medimaily-700">/Monat</span>
+                  <span className="text-blue-700">/Monat</span>
                   {isAnnual && (
-                    <div className="text-sm text-medimaily-600 mt-2">
+                    <div className="text-sm text-blue-600 mt-2">
                       Jährlich abgerechnet (spare {(plan.monthlyPrice - plan.annualPrice) * 12}€/Jahr)
                     </div>
                   )}
@@ -127,19 +127,19 @@ const Pricing = () => {
                 
                 <Button 
                   className={`w-full ${
-                    plan.isPopular ? 'btn-primary' : 'bg-white border border-medimaily-600 text-medimaily-600 hover:bg-medimaily-50'
+                    plan.isPopular ? 'btn-primary' : 'bg-white border border-blue-600 text-blue-600 hover:bg-blue-50'
                   }`}
                 >
                   Plan Wählen
                 </Button>
                 
                 <div className="mt-8">
-                  <h4 className="text-lg font-medium mb-4 text-medimaily-900">Was enthalten ist:</h4>
+                  <h4 className="text-lg font-medium mb-4 text-blue-900">Was enthalten ist:</h4>
                   <ul className="space-y-3">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start">
-                        <Check className="h-5 w-5 text-medimaily-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-medimaily-700">{feature}</span>
+                        <Check className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-blue-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -149,8 +149,8 @@ const Pricing = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center text-medimaily-700">
-          Benötigen Sie eine maßgeschneiderte Lösung? <a href="#contact" className="text-medimaily-600 font-medium">Kontaktieren Sie uns</a> für Unternehmenspreise.
+        <div className="mt-12 text-center text-blue-700">
+          Benötigen Sie eine maßgeschneiderte Lösung? <a href="#contact" className="text-blue-600 font-medium">Kontaktieren Sie uns</a> für Unternehmenspreise.
         </div>
       </div>
     </section>

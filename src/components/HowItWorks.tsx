@@ -25,10 +25,10 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="section-padding bg-slate-900/50 relative overflow-hidden">
+    <section className="section-padding bg-white relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 right-0 h-64 w-64 bg-blue-900/30 rounded-full opacity-40 blur-3xl -mr-32 -mt-32"></div>
-      <div className="absolute bottom-0 left-0 h-64 w-64 bg-blue-900/20 rounded-full opacity-30 blur-3xl -ml-32 -mb-32"></div>
+      <div className="absolute top-0 right-0 h-64 w-64 bg-blue-100 rounded-full opacity-40 blur-3xl -mr-32 -mt-32"></div>
+      <div className="absolute bottom-0 left-0 h-64 w-64 bg-blue-50 rounded-full opacity-30 blur-3xl -ml-32 -mb-32"></div>
       
       <div className="container-custom">
         <div className="text-center mb-16 animate-on-scroll">
@@ -48,18 +48,18 @@ const HowItWorks = () => {
             >
               <div className="w-full md:w-1/2">
                 <div className="relative">
-                  <div className="absolute -top-10 -left-10 text-7xl font-bold text-blue-900/40 z-0 opacity-80">
+                  <div className="absolute -top-10 -left-10 text-7xl font-bold text-blue-200 z-0 opacity-80">
                     {step.number}
                   </div>
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-4 text-slate-100">{step.title}</h3>
-                    <p className="text-slate-300 mb-6">{step.description}</p>
+                    <h3 className="text-2xl font-bold mb-4 text-blue-900">{step.title}</h3>
+                    <p className="text-blue-700 mb-6">{step.description}</p>
                     <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
                   </div>
                 </div>
               </div>
               <div className="w-full md:w-1/2">
-                <div className="bg-slate-800/60 p-2 rounded-lg shadow-xl transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 relative border border-slate-700/50">
+                <div className="bg-white p-2 rounded-lg shadow-xl transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 relative border border-blue-200">
                   <img 
                     src={step.image} 
                     alt={step.title} 
@@ -67,7 +67,7 @@ const HowItWorks = () => {
                     style={{ height: '300px' }}
                   />
                   {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded"></div>
                 </div>
               </div>
             </div>

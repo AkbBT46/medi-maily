@@ -25,7 +25,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="section-padding bg-slate-800/50">
+    <section className="section-padding bg-blue-50">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="section-title">Was unsere Kunden sagen</h2>
@@ -36,7 +36,7 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border border-slate-700/50 hover:shadow-lg transition-shadow bg-slate-800/60">
+            <Card key={index} className="border border-blue-200 hover:shadow-lg transition-shadow bg-white">
               <CardContent className="pt-6 pb-8 px-8">
                 <div className="flex flex-col items-center text-center">
                   <div className="mb-6 relative">
@@ -47,15 +47,15 @@ const Testimonials = () => {
                       className="w-20 h-20 rounded-full object-cover relative z-10"
                     />
                   </div>
-                  <div className="mb-4 text-slate-100">
-                    <svg className="w-8 h-8 text-blue-400 mb-2 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-4 text-blue-900">
+                    <svg className="w-8 h-8 text-blue-600 mb-2 mx-auto" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
-                    <p className="mb-4 text-slate-300">{testimonial.quote}</p>
+                    <p className="mb-4 text-blue-700">{testimonial.quote}</p>
                   </div>
                   <div>
-                    <p className="font-bold text-slate-100">{testimonial.author}</p>
-                    <p className="text-sm text-blue-400">{testimonial.position}</p>
+                    <p className="font-bold text-blue-900">{testimonial.author}</p>
+                    <p className="text-sm text-blue-600">{testimonial.position}</p>
                   </div>
                 </div>
               </CardContent>
@@ -64,13 +64,13 @@ const Testimonials = () => {
         </div>
         
         <div className="mt-16 flex justify-center">
-          <div className="bg-blue-900/30 rounded-lg p-8 max-w-3xl text-center border border-blue-700/50">
-            <p className="text-xl text-slate-300 mb-4">
+          <div className="bg-blue-100 rounded-lg p-8 max-w-3xl text-center border border-blue-200">
+            <p className="text-xl text-blue-700 mb-4">
               "MediMaily war ein Game-Changer für unsere Zahnarztpraxis. Ihre E-Mail-Automatisierung hat dieses Jahr über 150.000 € zusätzlichen Umsatz generiert."
             </p>
             <div className="inline-flex items-center">
-              <div className="h-px w-8 bg-blue-400 mr-4"></div>
-              <p className="font-bold text-slate-100">Dr. Robert Williams, Williams Dental Group</p>
+              <div className="h-px w-8 bg-blue-600 mr-4"></div>
+              <p className="font-bold text-blue-900">Dr. Robert Williams, Williams Dental Group</p>
             </div>
           </div>
         </div>
