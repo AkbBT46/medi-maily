@@ -1,16 +1,11 @@
-
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
-  return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative z-10 min-h-screen flex items-center">
+  return <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative z-10 min-h-screen flex items-center">
       <div className="container-custom text-center relative">
         <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white max-w-4xl mx-auto transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           Automatisierte E-Mails. <span className="text-medimaily-400">
@@ -27,7 +22,7 @@ Mehr Patienten.</span>
           <Button className="btn-primary text-base py-6 px-8">
             Demo Anfordern
           </Button>
-          <Button variant="outline" className="btn-outline text-base py-6 px-8 border-white/30 text-white hover:bg-white/10">
+          <Button variant="outline" className="btn-outline text-base py-6 border-white/30 text-white bg-orange-500 hover:bg-orange-400 px-[38px] my-0 mx-0">
             Mehr Erfahren
           </Button>
         </div>
@@ -52,15 +47,11 @@ Mehr Patienten.</span>
         </div>
         
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center text-center">
-          {['Kunde 1', 'Kunde 2', 'Kunde 3', 'Kunde 4'].map((kunde, index) => (
-            <div key={index} className={`grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500 delay-${index * 100} ease-out ${isLoaded ? 'translate-y-0 opacity-70' : 'translate-y-10 opacity-0'}`}>
+          {['Kunde 1', 'Kunde 2', 'Kunde 3', 'Kunde 4'].map((kunde, index) => <div key={index} className={`grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500 delay-${index * 100} ease-out ${isLoaded ? 'translate-y-0 opacity-70' : 'translate-y-10 opacity-0'}`}>
               <img src={`https://via.placeholder.com/150x50?text=Dental+${kunde}`} alt={`${kunde} Logo`} className="h-10 w-auto mx-auto" />
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
