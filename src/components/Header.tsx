@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { TextShimmer } from '@/components/ui/text-shimmer';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +11,13 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-blue-600">
+            <TextShimmer
+              as="div"
+              duration={2.5}
+              className="text-2xl font-bold [--base-color:theme(colors.blue.600)] [--base-gradient-color:theme(colors.blue.300)]"
+            >
               MediMaily
-            </div>
+            </TextShimmer>
           </div>
 
           {/* Desktop Navigation */}
