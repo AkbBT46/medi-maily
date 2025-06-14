@@ -1,13 +1,68 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import MacOSDock from '@/components/ui/mac-os-dock';
+
+// Sample app data for the dock
+const sampleApps = [
+  { 
+    id: 'finder', 
+    name: 'Finder', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/finder-2021-09-10.png?rf=1024' 
+  },
+  { 
+    id: 'calculator', 
+    name: 'Calculator', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/calculator-2021-04-29.png?rf=1024' 
+  },
+  { 
+    id: 'terminal', 
+    name: 'Terminal', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/terminal-2021-06-03.png?rf=1024' 
+  },
+  { 
+    id: 'mail', 
+    name: 'Mail', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/mail-2021-05-25.png?rf=1024' 
+  },
+  { 
+    id: 'safari', 
+    name: 'Safari', 
+    icon: 'https://cdn.jim-nielsen.com/macos/1024/safari-2021-06-02.png?rf=1024' 
+  },
+];
+
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [openApps, setOpenApps] = useState<string[]>(['finder', 'safari']);
+
+  const handleAppClick = (appId: string) => {
+    console.log('App clicked:', appId);
+    
+    // Toggle app in openApps array
+    setOpenApps(prev => 
+      prev.includes(appId) 
+        ? prev.filter(id => id !== appId)
+        : [...prev, appId]
+    );
+  };
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  return <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative z-10 min-h-screen flex items-center">
+
+  return (
+    <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative z-10 min-h-screen flex items-center">
       <div className="container-custom text-center relative">
+        {/* MacOS Dock positioned above the title */}
+        <div className={`mb-8 flex justify-center transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <MacOSDock
+            apps={sampleApps}
+            onAppClick={handleAppClick}
+            openApps={openApps}
+          />
+        </div>
+
         <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-blue-500 max-w-4xl mx-auto transition-all duration-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           Automatisierte E-Mails. <span className="text-medimaily-400">
 Mehr Patienten.</span>
@@ -53,6 +108,8 @@ Mehr Patienten.</span>
             </div>)}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
