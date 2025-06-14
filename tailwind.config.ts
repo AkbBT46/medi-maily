@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,29 +52,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// MediMaily custom colors - changed to orange palette
-				medimaily: {
-					50: '#fff7ed',
-					100: '#ffedd5',
-					200: '#fed7aa',
-					300: '#fdba74',
-					400: '#fb923c',
-					500: '#f97316',
-					600: '#ea580c',
-					700: '#c2410c',
-					800: '#9a3412',
-					900: '#7c2d12',
-					950: '#431407',
+				// Schwarz (Background) und Purple (lila) Palette als Theme
+				themeblack: "#0b0b12",
+				themewhite: "#ffffff",
+				lilapalette: {
+					50: "#faf5ff",
+					100: "#f3e8ff",
+					200: "#e9d5ff",
+					300: "#d8b4fe",
+					400: "#c084fc",
+					500: "#a21caf",
+					600: "#9333ea",
+					700: "#7e22ce",
+					800: "#6d28d9",
+					900: "#581c87",
+					950: "#3b0764"
 				},
 			},
 			borderRadius: {
